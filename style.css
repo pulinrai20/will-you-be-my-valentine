@@ -1,80 +1,95 @@
 * {
   box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
 }
 
 body {
   margin: 0;
-  height: 100vh;
-  background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
 }
 
-.card {
-  background: white;
-  padding: 30px 40px;
-  border-radius: 16px;
+/* Base screen */
+.screen {
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-  max-width: 400px;
+  transition: background 0.4s ease;
 }
 
 h1 {
-  margin-bottom: 20px;
-}
-
-.buttons {
-  margin-top: 20px;
+  font-size: 32px;
+  margin-bottom: 25px;
 }
 
 button {
-  border: none;
-  border-radius: 10px;
-  padding: 12px 24px;
-  margin: 10px;
+  padding: 14px 26px;
+  margin: 12px;
   font-size: 18px;
+  border: none;
+  border-radius: 12px;
   cursor: pointer;
 }
 
-#yesBtn {
-  background-color: #ff4d6d;
+/* Quiz buttons */
+.quiz button {
+  background: #ff4d6d;
   color: white;
-  font-size: 20px;
 }
 
-#noBtn {
-  background-color: #d3d3d3;
-  font-size: 16px;
+/* Result backgrounds */
+.correct {
+  background: #7CFF7C;
 }
 
-#errorText {
-  margin-top: 15px;
-  color: red;
+.wrong {
+  background: #FF6B6B;
 }
 
-.hidden {
-  display: none;
+/* Images */
+.result-img {
+  width: 260px;
+  margin: 25px 0;
+  border-radius: 16px;
 }
 
-#sadImg {
-  margin-top: 15px;
-  width: 220px;
-  border-radius: 12px;
+/* Navigation buttons */
+.nav-buttons {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
 }
 
-@keyframes popIn {
-  0% {
+.nav-buttons button {
+  background: #222;
+  color: white;
+}
+
+/* Valentine page */
+.valentine img {
+  width: 300px;
+  border-radius: 18px;
+  transition: 0.3s ease;
+}
+
+/* Final animation */
+.final {
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from {
     opacity: 0;
-    transform: scale(0.8);
+    transform: scale(0.95);
   }
-  100% {
+  to {
     opacity: 1;
     transform: scale(1);
   }
-}
-
-.yay-card {
-  animation: popIn 0.6s ease-out forwards;
 }
