@@ -5,12 +5,13 @@ const sadImg = document.getElementById("sadImg");
 
 yesBtn.addEventListener("click", () => {
   document.body.innerHTML = `
-    <div class="card">
+    <div class="card yay-card">
       <h1>YAYYYYY 💖</h1>
-      <p>You just made me really, really happy.</p>
+      <p>See you on 14th 😘😘😘</p>
     </div>
   `;
 });
+
 
 noBtn.addEventListener("click", () => {
   errorText.classList.remove("hidden");
